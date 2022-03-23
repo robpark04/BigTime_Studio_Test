@@ -6,7 +6,10 @@ Imagine that you are interviewing candidates for this position. Write an example
 25 mins
 ### Answer
 - Tell me about youreself.
-- Tell me about what you know.
-- Why are you applying this position?
+- Why Should we hire you?
+- How many hours do you normally work?
+- Who was your best boss and who was the worst?
+- What Are You Looking for in Your Next Job?
 - What is your salary expectation?
 - When can you start work?
+- What was your most challenge in your working?

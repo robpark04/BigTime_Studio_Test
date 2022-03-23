@@ -1,0 +1,29 @@
+specVersion: 0.0.2
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: ETHPoolManager
+    network: rinkeby
+    source:
+      address: "0xEF523279DBb732D666DbEFfd295c038E4D009664"
+      abi: ETHPoolManager
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - OwnershipTransferred
+        - UserDeposited
+        - UserWithdrawed
+      abis:
+        - name: ETHPoolManager
+          file: ETHPoolManager/abis/ETHPoolManager.json
+      eventHandlers:
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: UserDeposited(address,uint256)
+          handler: handleUserDeposited
+        - event: UserWithdrawed(address,uint256)
+          handler: handleUserWithdrawed
+      file: ETHPoolManager/ETHPoolManager.wasm

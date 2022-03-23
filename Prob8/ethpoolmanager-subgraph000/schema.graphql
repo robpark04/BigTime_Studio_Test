@@ -1,0 +1,17 @@
+type OwnershipTransferred @entity {
+  id: ID!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type UserDeposited @entity {
+  id: ID!
+  account: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type UserWithdrawed @entity {
+  id: ID!
+  account: Bytes! # address
+  amount: BigInt! # uint256
+}
